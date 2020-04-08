@@ -13,7 +13,7 @@ class AdminnController extends Controller
     	$adminn = DB::table('adminn')->get();
 
     	// mengirim data pegawai ke view muthowwif
-    	return view('adminn', ['adminn'=>$adminn]);
+    	return view('/admin/adminn', ['adminn'=>$adminn]);
     }
 
 		// method untuk menampilkan view form tambah muthowwif
@@ -21,7 +21,7 @@ class AdminnController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambahadminn');
+		return view('/admin/tambahadminn');
 
 	}
 		// method untuk insert data ke table muthowwif
@@ -29,9 +29,8 @@ class AdminnController extends Controller
 	{
 		// insert data ke table muthowwif
 		DB::table('adminn')->insert([
-			'no' => $request->no,
 			'id' => $request->id,
-			'nama' => $request->nama,
+			'name' => $request->name,
 			'username'=>$request->username,
 			'password'=>$request->password,
 			]);
@@ -40,10 +39,10 @@ class AdminnController extends Controller
 
 	}
 		// method untuk edit data muthowwif
-	public function edit($no)
+	public function edit($id)
 	{
-		// mengambil data muthowwif berdasarkan no(primary key) yang dipilih
-		$adminn = DB::table('adminn')->where('no',$no)->get();
+		// mengambil data muthowwif berdasarkan id(primary key) yang dipilih
+		$adminn = DB::table('adminn')->where('id',$id)->get();
 		// passing data muthowwif yang didapat ke view edit.blade.php
 		return view('editadminn',['adminn' => $adminn]);
 
@@ -53,25 +52,24 @@ class AdminnController extends Controller
 	public function update(Request $request)
 	{
 		// update data muthowwif
-		DB::table('adminn')->where('no',$request->no)->update([
-			'no' => $request->no,
+		DB::table('adminn')->where('id',$request->id)->update([
 			'id' => $request->id,
-			'nama' => $request->nama,
+			'name' => $request->name,
 			'username'=>$request->username,
 			'password'=>$request->password,
 		]);
 		// alihkan halaman ke halaman muthowwif
-		return redirect('/adminn');
+		return redirect('/admin/adminn');
 	}
 
 		// method untuk hapus data muthowwif
-	public function hapus($no)
+	public function hapus($id)
 	{
-		// menghapus data muthowwif berdasarkan no(Primary key) yang dipilih
-		DB::table('adminn')->where('no',$no)->delete();
+		// menghapus data muthowwif berdasarkan id(Primary key) yang dipilih
+		DB::table('adminn')->where('id',$id)->delete();
 			
 		// alihkan halaman ke halaman muthowwif
-		return redirect('/adminn');
+		return redirect('/admin/adminn');
 	}
 }
 

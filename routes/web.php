@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('page');
-});
 
-Route::get('/login', function () {
+Route::get('/','HomeController@index');
+Route::get('/layouts/gallery','HomeController@gallery');
+Route::get('/layouts/schedulehaji','HomeController@schedulehaji');
+Route::get('daftar','HomeController@daftar');
+
+
+Route::get('/layouts/login', function () {
     return view('login');
 });
-Route::get('/inputagenda', function () {
+Route::get('/admin/inputagenda', function () {
     $waktu=['pagi','siang','sore','malam'];
-    $acara=['Keberangkatan','Penjemputan'];
+    $acara=['Keberangkatan Haji','Penjemputan Haji','Keberangkatan Umroh','Penjemputan Umroh'];
     return view('inputagenda',compact('waktu','acara'));
-});
-Route::get('/about', function () {
-    return view('about');
 });
 Route::get('/admin/admin', function () {
     return view('admin');
@@ -34,11 +34,20 @@ Route::get('/admin/admin', function () {
 Route::get('login', function () {
     return view('login');
 });
+Route::get('showmuthowwif', function () {
+    return view('showmuthowwif');
+});
+Route::get('showpaket', function () {
+    return view('showpaket');
+});
 Route::get('/adminnindex', function () {
     return view('adminnindex');
 });
 Route::get('/loginuser', function () {
     return view('loginuser');
+});
+Route::get('/layouts/schedulehaji', function () {
+    return view('schedulehaji');
 });
 //route buat crud muthowwif
 Route::get('/muthowwif', 'MuthowwifController@index');

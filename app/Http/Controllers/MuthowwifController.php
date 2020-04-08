@@ -13,7 +13,7 @@ class MuthowwifController extends Controller
     	$muthowwif = DB::table('muthowwif')->get();
 
     	// mengirim data pegawai ke view muthowwif
-    	return view('muthowwif', ['muthowwif'=>$muthowwif]);
+    	return view('/admin/muthowwif', ['muthowwif'=>$muthowwif]);
     }
 
 		// method untuk menampilkan view form tambah muthowwif
@@ -21,7 +21,7 @@ class MuthowwifController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambahmuthowwif');
+		return view('/admin/tambahmuthowwif');
 
 	}
 	
@@ -30,7 +30,7 @@ class MuthowwifController extends Controller
 	{
 		// insert data ke table muthowwif
 		DB::table('muthowwif')->insert([
-			'no' => $request->no,
+		
 			'id' => $request->id,
 			'name' => $request->name,
 			'umur'=>$request->umur,

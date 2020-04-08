@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class schedulehajiController extends Controller
+class ScheduleHajiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class schedulehajiController extends Controller
         // mengambil data dari table schedulehaji
         $schedulehaji = DB::table ('schedulehaji') -> get(); // get()= select * from schedulehaji
     // mengirim data schedulehaji ke view schedulehaji
-    return view('schedulehaji', ['schedulehaji' => $schedulehaji]);
+    return view('/admin/schedulehaji', ['schedulehaji' => $schedulehaji]);
     }
 
     /**
@@ -25,10 +25,10 @@ class schedulehajiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function tambah()
+    public function create()
     {
         // memanggil view create
-    return view('tambahschedulehaji');
+    return view('/admin/tambahschedulehaji');
     }
 
     /**
@@ -41,15 +41,14 @@ class schedulehajiController extends Controller
     {
     // insert data ke table schedulehaji
     DB::table('schedulehaji') -> insert([
-        'no'  => $request ->no,
         'id' => $request ->id,
         'nama_acara' => $request ->nama_acara,
-        'tanggal' => $request ->tanggal,
         'tempat' => $request ->tempat,
+        'tanggal' => $request ->tanggal,
         'waktu' => $request ->waktu,
     ]);
     // alihkan halaman tambah Schedule haji ke halaman schedulehaji
-    return redirect('/schedulehaji');
+    return redirect('/admin/schedulehaji');
     }
 
     /**
@@ -69,12 +68,12 @@ class schedulehajiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($no)
+    public function edit($id)
     {
         
-		$schedulehaji = DB::table('schedulehaji')->where('no',$no)->get();
-		
-		return view('editsh',['schedulehaji' => $schedulehaji]);
+        $schedulehaji = DB::table('schedulehaji')->where('id',$id)->get();
+        
+        return view('/admin/editsh',['schedulehaji' => $schedulehaji]);
     }
 
     /**
@@ -86,16 +85,16 @@ class schedulehajiController extends Controller
      */
     public function update(Request $request)
     {
-        DB::table('schedulehaji')->where('no',$request->no)->update([
-			'id' => $request->id,
-            'nama_acara' => $request->nama_acara,
-            'tanggal' => $request ->tanggal,
-            'tempat' => $request ->tempat,
-            'waktu' => $request ->waktu,
+        DB::table('schedulehaji')->where('id',$request->id)->update([
+        'id' => $request->id,
+        'nama_acara' => $request->nama_acara,
+        'tempat' => $request ->tempat,
+        'tanggal' => $request ->tanggal,
+        'waktu' => $request ->waktu,
             
-		]);
-		// alihkan halaman ke halaman pegawai
-		return redirect('/schedulehaji');
+        ]);
+        // alihkan halaman ke halaman pegawai
+        return redirect('/admin/schedulehaji');
     }
 
     /**
@@ -104,10 +103,10 @@ class schedulehajiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($no)
+    public function destroy($id)
     {
-        DB::table('schedulehaji')->where('no',$no)->delete();
-			
-		return redirect('/schedulehaji');
+        DB::table('schedulehaji')->where('id',$id)->delete();
+            
+        return redirect('/schedulehaji');
     }
 }
