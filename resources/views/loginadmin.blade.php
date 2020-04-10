@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login User</title>
+    <title>Login Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="src/assets/vendors/iconfonts/mdi/css/materialdesignicons.css" />
     <link rel="stylesheet" href="src/assets/vendors/css/vendor.addons.css" />
@@ -43,12 +43,14 @@
                     <div>{{Session::get('alert-success')}}</div>
                 </div>
             @endif
-               <form action="{{ url('/loginPost') }}" method="post">
+               <form action="{{ url('/loginadminPost') }}" method="post">
+                    @csrf
                     <div class="form-group input-rounded">
-                      <input type="email" class="form-control" placeholder="email" />
+                      
+                      <input type="username" class="form-control" placeholder="Username" name="username" />
                     </div>
                     <div class="form-group input-rounded">
-                      <input type="password" class="form-control" placeholder="password" />
+                      <input type="password" class="form-control" placeholder="Password" name="password" />
                     </div>
                     <div class="form-inline">
                       <div class="checkbox">
@@ -56,10 +58,10 @@
                           <input type="checkbox" class="form-check-input" />Remember me <i class="input-frame"></i>
                         </label>
                       </div>
-          </div>
-          <div class="form-group">
+					</div>
+					<div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Login</button>
-                    <a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>
+                    <a href="{{url('registeradmin')}}" class="btn btn-md btn-warning">Register</a>
                 </div>
                   </form>
                 </div>

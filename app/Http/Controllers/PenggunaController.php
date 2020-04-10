@@ -15,17 +15,12 @@ class PenggunaController extends Controller
      */
     public function index()
     {
-        
         $pengguna = DB::table('pengguna')->get();
-            return view('pengguna', ['pengguna'=>$pengguna]);
-    }
-
-   
-    
-    
+        return view('/admin/pengguna', ['pengguna'=>$pengguna]);
+    }    
     public function create()
     {
-        return view('createusers');
+        return view('/admin/tambahpengguna');
     }
 
     /**
@@ -36,17 +31,14 @@ class PenggunaController extends Controller
      */
     public function store(Request $request)
     {
-        DB::table('users')->insert([
-            'no' => $request->no,
+        DB::table('pengguna')->insert([
             'id' => $request->id,
             'email' => $request->email,
             'username'=>$request->username,
             'password'=>$request->password,
             'alamat'=>$request->alamat,
-           
-            
             ]);
-            return redirect('/users');
+            return redirect('/pengguna');
     }
 
     /**
@@ -66,11 +58,11 @@ class PenggunaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($no)
+    public function edit($id)
     {
-        $users = DB::table('users')->where('no',$no)->get();
+        $pengguna = DB::table('pengguna')->where('id',$id)->get();
         // passing data muthowwif yang didapat ke view edit.blade.php
-        return view('editusers',['users' => $users]);
+        return view('/admin/editpengguna',['pengguna' => $pengguna]);
     }
 
     /**
@@ -82,17 +74,16 @@ class PenggunaController extends Controller
      */
     public function update(Request $request)
     {
-        DB::table('users')->where('no',$request->no)->update([
+        DB::table('pengguna')->where('id',$request->id)->update([
 
             'id' => $request->id,
             'email' => $request->email,
             'username'=>$request->username,
             'password'=>$request->password,
             'alamat'=>$request->alamat,
-            
         ]);
         // alihkan halaman ke halaman muthowwif
-        return redirect('/users');
+        return redirect('/pengguna');
     }
 
     /**
@@ -101,12 +92,12 @@ class PenggunaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($no)
+    public function destroy($id)
     {
-        DB::table('users')->where('no',$no)->delete();
+        DB::table('pengguna')->where('id',$id)->delete();
             
         // alihkan halaman ke halaman muthowwif
-        return redirect('/users');
+        return redirect('/pengguna');
     }
 }
 

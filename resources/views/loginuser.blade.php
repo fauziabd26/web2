@@ -45,10 +45,11 @@
             @endif
                <form action="{{ url('/loginPost') }}" method="post">
                     <div class="form-group input-rounded">
-                      <input type="email" class="form-control" placeholder="email" />
+                      
+                      <input type="email" class="form-control" placeholder="Email" />
                     </div>
                     <div class="form-group input-rounded">
-                      <input type="password" class="form-control" placeholder="password" />
+                      <input type="password" class="form-control" placeholder="Password" />
                     </div>
                     <div class="form-inline">
                       <div class="checkbox">
@@ -56,8 +57,8 @@
                           <input type="checkbox" class="form-check-input" />Remember me <i class="input-frame"></i>
                         </label>
                       </div>
-          </div>
-          <div class="form-group">
+					</div>
+					<div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Login</button>
                     <a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>
                 </div>

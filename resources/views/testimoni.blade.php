@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Paket</title>
+	<title>Testimoni</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Photo Gallery HTML Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -81,52 +81,22 @@
     <!-- header section end -->
 
 		<!-- Page section -->
-		<div class="page-section gallery-single-page">
-			<div class="gallery-single-warp">
-				<div class="row">
-					<div class="col-xl-6 p-0">
-						<img src="img/paket/paket1.jpg" alt="">
-					</div>
-					<div class="col-xl-6 p-0">
-						<div class="gallery-single-text">
-							<span>Paket Promo</span>
-							<h2>9 hari</h2>
-							<ul>
-								<li>Jadwal :</li><span><p> 2 April 2020</p></span>
-								<li>Penerbangan: </li><span><p> Etihad,Oman</p></span>
-								<li>Hotel Mekkah :</li><span><p> Reyadah Al hijrah/setaraf</p></span>
-								<li>Hotel Madinah :</li><span><p> Buraq Golden/setaraf</p></span>
-								<li>Contact :</li><span><p> Hj. Dian Kurniawati</p></span>
-								<li>No. Telp :</li><span><p> +62812-9850-297</p></span>
-							</ul>
-						</div>
-					</div>
+	<div class="standard_wrapper">
+		<div class="page_content_wrapper">
+			<div class="inner">
+				<div style="margin: auto;width: 100%">
+					<h2 class="ppb_tittle" style>
+						<span>Testimoni Jamaah</span>
+					</h2>
+					<div class="page-tagline" style>
+						<p>Apa kata jamaah tentang kami</p>
+					</div> 	
 				</div>
 			</div>
 		</div>
-		<div class="page-section gallery-single-page">
-			<div class="gallery-single-warp">
-				<div class="row">
-					<div class="col-xl-6 p-0">
-						<img src="img/paket/paket2.jpg" alt="">
-					</div>
-					<div class="col-xl-6 p-0">
-						<div class="gallery-single-text">
-							<span>Paket Umroh Awal Ramdhan</span>
-							<h2>12 hari</h2>
-							<ul>
-								<li>Jadwal :</li><span><p> Awal Ramdhan</p></span>
-								<li>Penerbangan: </li><span><p> Saudi Arabia,garuda airlines</p></span>
-								<li>Hotel Mekkah :</li><span><p> Arrayah Grand</p></span>
-								<li>Hotel Madinah :</li><span><p> Jawharat Al Rashid</p></span>
-								<li>Contact :</li><span><p> Hj. Dian Kurniawati</p></span>
-								<li>No. Telp :</li><span><p> +62812-9850-297</p></span>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	</div>
+
+		<img src="img/testimoni/tes.jpg" alt="">
 		<!-- Page section end-->
 	</div>
 

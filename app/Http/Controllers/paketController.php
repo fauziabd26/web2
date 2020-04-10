@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Paket; 
 
-class ScheduleHajiController extends Controller
+class paketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +15,8 @@ class ScheduleHajiController extends Controller
      */
     public function index()
     {
-        // mengambil data dari table schedulehaji
-        $schedulehaji = DB::table ('schedulehaji') -> get(); // get()= select * from schedulehaji
-    // mengirim data schedulehaji ke view schedulehaji
-    return view('/admin/schedulehaji', ['schedulehaji' => $schedulehaji]);
-    }
+        $paket = DB::table ('paket') -> get(); 
+    return view('/admin/paket', ['paket' => $paket]);    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,8 +25,7 @@ class ScheduleHajiController extends Controller
      */
     public function create()
     {
-        // memanggil view create
-    return view('/admin/tambahschedulehaji');
+         return view('/admin/tambahpaket');
     }
 
     /**
@@ -39,16 +36,14 @@ class ScheduleHajiController extends Controller
      */
     public function store(Request $request)
     {
-    // insert data ke table schedulehaji
-    DB::table('schedulehaji') -> insert([
+        DB::table('paket') -> insert([
         'id' => $request ->id,
-        'nama_acara' => $request ->nama_acara,
-        'tempat' => $request ->tempat,
         'tanggal' => $request ->tanggal,
-        'waktu' => $request ->waktu,
+        'nama_muthowwif' => $request ->nama_muthowwif,
+        'nama_paket' => $request ->nama_paket,
+
     ]);
-    // alihkan halaman tambah Schedule haji ke halaman schedulehaji
-    return redirect('/admin/schedulehaji');
+           return redirect('/paket');
     }
 
     /**
@@ -59,7 +54,8 @@ class ScheduleHajiController extends Controller
      */
     public function show($id)
     {
-        //
+        $paket = paket::all();
+        return view('/showpaket',compact('paket'));
     }
 
     /**
@@ -70,11 +66,9 @@ class ScheduleHajiController extends Controller
      */
     public function edit($id)
     {
+        $paket = DB::table('paket')->where('id',$id)->get();
         
-        $schedulehaji = DB::table('schedulehaji')->where('id',$id)->get();
-        
-        return view('/admin/editsh',['schedulehaji' => $schedulehaji]);
-    }
+        return view('/admin/editpaket',['paket' => $paket]);    }
 
     /**
      * Update the specified resource in storage.
@@ -85,17 +79,13 @@ class ScheduleHajiController extends Controller
      */
     public function update(Request $request)
     {
-        DB::table('schedulehaji')->where('id',$request->id)->update([
-        'id' => $request->id,
-        'nama_acara' => $request->nama_acara,
-        'tempat' => $request ->tempat,
-        'tanggal' => $request ->tanggal,
-        'waktu' => $request ->waktu,
+        DB::table('paket')->where('id',$request->id)->update([
+            'tanggal' => $request->tanggal,
+            'nama_muthowwif' => $request ->nama_muthowwif,
+            'nama_paket' => $request ->nama_paket,
             
         ]);
-        // alihkan halaman ke halaman pegawai
-        return redirect('/admin/schedulehaji');
-    }
+         return redirect('/paket');    }
 
     /**
      * Remove the specified resource from storage.
@@ -105,8 +95,8 @@ class ScheduleHajiController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('schedulehaji')->where('id',$id)->delete();
+           DB::table('paket')->where('id',$id)->delete();
             
-        return redirect('/schedulehaji');
+        return redirect('/paket');
     }
 }

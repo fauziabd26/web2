@@ -33,7 +33,14 @@
             <div class="grid-body">
               <div class="row">
                 <div class="col-lg-7 col-md-8 col-sm-9 col-12 mx-auto form-wrapper">
-                  @if(\Session::has('alert'))
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <!-- Add Your Content Inside -->
+        <div class="content">
+            <!-- Remove This Before You Start -->
+            <hr>
+            @if(\Session::has('alert'))
                 <div class="alert alert-danger">
                     <div>{{Session::get('alert')}}</div>
                 </div>
@@ -43,45 +50,22 @@
                     <div>{{Session::get('alert-success')}}</div>
                 </div>
             @endif
-               <form action="{{ url('/loginPost') }}" method="post">
-                    <div class="form-group input-rounded">
-                      <input type="email" class="form-control" placeholder="email" />
-                    </div>
-                    <div class="form-group input-rounded">
-                      <input type="password" class="form-control" placeholder="password" />
-                    </div>
-                    <div class="form-inline">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="form-check-input" />Remember me <i class="input-frame"></i>
-                        </label>
-                      </div>
-          </div>
-          <div class="form-group">
+            <form action="{{ url('/loginPost') }}" method="post">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Login</button>
                     <a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>
                 </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+            </form>
         </div>
-      </div>
-      <div class="auth_footer">
-        <p class="text-muted text-center">© MWR Inc 2019</p>
-      </div>
-    </div>
-    <!--page body ends -->
-    <!-- SCRIPT LOADING START FORM HERE /////////////-->
-    <!-- plugins:js -->
-    <script src="src/assets/vendors/js/core.js"></script>
-    <script src="src/assets/vendors/js/vendor.addons.js"></script>
-    <!-- endinject -->
-    <!-- Vendor Js For This Page Ends-->
-    <!-- Vendor Js For This Page Ends-->
-    <!-- build:js -->
-    <script src="src/assets/js/template.js"></script>
-    <!-- endbuild -->
-  </body>
-</html>
+        <!-- /.content -->
+    </section>
+    <!-- /.main-section -->

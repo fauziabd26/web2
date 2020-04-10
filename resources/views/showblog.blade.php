@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Muthowwif</title>
+	<title>Blog</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Photo Gallery HTML Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -53,9 +53,9 @@
 				<i class="fa fa-times"></i>
 			</div>
 			<div class="header-warp">
-		          <a href="" class="site-logo">
-		            <img src="./img/slider-bg-1.png" alt="">
-		          </a>
+				<a href="" class="site-logo">
+					<img src="./img/slider-bg-1.png" alt="">
+				</a>
 				<img src="img/menu-icon.png" alt="" class="menu-icon">
 				<ul class="main-menu">
 					<li><a href="/">About Us</a></li>
@@ -67,66 +67,52 @@
 				</ul>
 				<div class="social-links-warp">
 					<div class="social-links">
-						<a href=""><i class="fa fa-youtube"></i></a>
-						<a href="https://www.instagram.com/multazam_wisata/"><i class="fa fa-instagram"></i></a>
+						<a href=""><i class="fa fa-behance"></i></a>
+						<a href=""><i class="fa fa-dribbble"></i></a>
+						<a href=""><i class="fa fa-twitter"></i></a>
 						<a href=""><i class="fa fa-facebook"></i></a>
-						
+						<a href=""><i class="fa fa-pinterest"></i></a>
 					</div>
 					<div class="social-text">Find us on</div>
 				</div>
 			</div>
-			<div class="copyright">Kelompok 7  @ All rights reserved</div>
+			<div class="copyright">Colorlib 2018  @ All rights reserved</div>
 		</header>
 		<!-- header section end -->
 
+
 		<!-- Page section -->
-		<div class="page-section gallery-single-page">
-			<div class="gallery-single-warp">
-				<div class="row">
-					<div class="col-xl-6 p-0">
-						<div class="gallery-single-slider owl-carousel">
-							<img src="img/gallery-single/hai.jpg" alt="">
-							<img src="img/gallery-single/2.jpg" alt="">
+		<div class="page-section blog-page">
+			<div class="blog-warp">
+				<div class="blog-track">
+					<div class="blog-post">
+						<div class="blog-thumb set-bg" data-setbg="img/blog/doa1.jpg">
+							<!-- <div class="post-date">
+								<h3>10</h3>
+								<span>Dec, ‘18</span>
+							</div> -->
+						</div>
+						<h2 class="post-title">The best tips & tricks</h2>
+						<div class="post-metas">
+							<div class="post-meta">By MWR</div>|
+							<div class="post-meta">DO'A-DO'A</div>
+						</div>
+						<p>Jika membaca doa ini maka agar terhindar dari segala penyakit. </p>
+					</div>
+					<div class="blog-post">
+					<div class="blog-thumb set-bg" data-setbg="img/blog/doa2.jpg">
+						<div class="post-date">
+							<h3>10</h3>
+							<span>Dec, ‘18</span>
 						</div>
 					</div>
-					<div class="col-xl-6 p-0">
-						<div class="gallery-single-text">
-							<span>Muthowwif</span>
-							<h2>Fauzi</h2>
-							<ul>
-								<li><span>Birth:</span>August 25, 2018</li>
-								<li><span>Experience: </span> 5 tahun</li>
-								<li><span>Adress:</span>Bintaro, Tangsel</li>
-							</ul>
-							<p>sudah bertugas di 5 kota, dan sekarang dikota jakarta</p>
-							
-						</div>
+					<h2 class="post-title">The Best Tips & Tricks</h2>
+					<div class="post-metas">
+						<div class="post-meta">By MWR</div>|
+						<div class="post-meta">Quotes of the day</div>
 					</div>
+					<p>Doa pagi dan sore jika membaca di pagi dan di sore hari maka terhindar dari segala sesuatu membahayakan. </p>
 				</div>
-			</div>
-		</div>
-		<div class="page-section gallery-single-page">
-			<div class="gallery-single-warp">
-				<div class="row">
-					<div class="col-xl-6 p-0">
-						<div class="gallery-single-slider owl-carousel">
-							<img src="img/gallery-single/1.jpg" alt="">
-							<img src="img/gallery-single/2.jpg" alt="">
-						</div>
-					</div>
-					<div class="col-xl-6 p-0">
-						<div class="gallery-single-text">
-							<span>Muthowwif</span>
-							<h2>Rapli</h2>
-							<ul>
-								<li><span>Birth:</span>August 22, 2018</li>
-								<li><span>Experience: </span> 10 tahun</li>
-								<li><span>Adress:</span>Bsd, Tangsel</li>
-							</ul>
-							<p>saya sekarang bekerja di kota bandung</p>
-							
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Pengguna extends Migration
+class Regispaket extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class Pengguna extends Migration
      */
     public function up()
     {
-         Schema::create('pengguna', function (Blueprint $table) {
-            
-            $table->increments('id');           
-            $table->string('name');
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->string('asal');
+        Schema::create('regispaket', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('namapaket');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +27,6 @@ class Pengguna extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengguna');
+        Schema::dropIfExists('regispakets');
     }
 }

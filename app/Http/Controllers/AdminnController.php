@@ -10,10 +10,10 @@ class AdminnController extends Controller
     public function index()
     {
     	// mengambil data dari table muthowwif
-    	$adminn = DB::table('adminn')->get();
+    	$admin = DB::table('admin')->get();
 
     	// mengirim data pegawai ke view muthowwif
-    	return view('/admin/adminn', ['adminn'=>$adminn]);
+    	return view('/admin/adminn', ['adminn'=>$admin]);
     }
 
 		// method untuk menampilkan view form tambah muthowwif
@@ -28,7 +28,7 @@ class AdminnController extends Controller
 	public function store(Request $request)
 	{
 		// insert data ke table muthowwif
-		DB::table('adminn')->insert([
+		DB::table('admin')->insert([
 			'id' => $request->id,
 			'name' => $request->name,
 			'username'=>$request->username,
@@ -42,9 +42,9 @@ class AdminnController extends Controller
 	public function edit($id)
 	{
 		// mengambil data muthowwif berdasarkan id(primary key) yang dipilih
-		$adminn = DB::table('adminn')->where('id',$id)->get();
+		$admin = DB::table('admin')->where('id',$id)->get();
 		// passing data muthowwif yang didapat ke view edit.blade.php
-		return view('editadminn',['adminn' => $adminn]);
+		return view('/admin/editadminn',['adminn' => $admin]);
 
 	}
 
@@ -52,24 +52,24 @@ class AdminnController extends Controller
 	public function update(Request $request)
 	{
 		// update data muthowwif
-		DB::table('adminn')->where('id',$request->id)->update([
+		DB::table('admin')->where('id',$request->id)->update([
 			'id' => $request->id,
 			'name' => $request->name,
 			'username'=>$request->username,
 			'password'=>$request->password,
 		]);
 		// alihkan halaman ke halaman muthowwif
-		return redirect('/admin/adminn');
+		return redirect('/adminn');
 	}
 
 		// method untuk hapus data muthowwif
 	public function hapus($id)
 	{
 		// menghapus data muthowwif berdasarkan id(Primary key) yang dipilih
-		DB::table('adminn')->where('id',$id)->delete();
+		DB::table('admin')->where('id',$id)->delete();
 			
 		// alihkan halaman ke halaman muthowwif
-		return redirect('/admin/adminn');
+		return redirect('/adminn');
 	}
 }
 

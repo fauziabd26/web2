@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ScheduleHaji extends Migration
+class CreateRegispaketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class ScheduleHaji extends Migration
      */
     public function up()
     {
-        Schema::create('schedulehaji', function (Blueprint $table) {
+        Schema::create('regispakets', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_Acara');
-            $table->string('tempat');
-            $table->date('tanggal');
-            $table->time('waktu');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +26,6 @@ class ScheduleHaji extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('scheduleHaji');
+        Schema::dropIfExists('regispakets');
     }
 }

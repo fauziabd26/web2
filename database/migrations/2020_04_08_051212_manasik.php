@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Adminn extends Migration
+class Manasik extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class Adminn extends Migration
      */
     public function up()
     {
-        Schema::create('adminn', function (Blueprint $table) {
-            
-            $table->id();           
-            $table->string('name');
-            $table->string('username')->unique();
-            $table->string('password');
+        Schema::create('manasik', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_muthowwif');
+            $table->date('tanggal');
+            $table->string('tempat');
+            $table->time('waktu');
         });
     }
 
@@ -29,6 +29,7 @@ class Adminn extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adminn');
+                Schema::dropIfExists('manasik');
+
     }
 }

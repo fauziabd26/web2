@@ -51,14 +51,15 @@
 			            <li><a href="/layouts/gallery">Gallery</a></li>
 			            <li><a href="/showmuthowwif">Muthowwif</a></li>
 			            <li><a href="/showpaket">Daftar Paket</a></li>
-			            <li><a href="">Blog</a></li>
+			            <li><a href="/showblog">Blog</a></li>
+			            <li><a href="/testimoni">Testimoni</a></li>
 			        </ul>
 				</ul>
 				<div class="social-links-warp">
 					<div class="social-links">
 						
 						<a href=""><i class="fa fa-youtube"></i></a>
-						<a href=""><i class="fa fa-instagram"></i></a>
+						<a href="https://www.instagram.com/multazam_wisata/"><i class="fa fa-instagram"></i></a>
 						<a href=""><i class="fa fa-facebook"></i></a>
 						
 					</div>
