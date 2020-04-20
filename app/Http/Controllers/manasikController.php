@@ -35,7 +35,8 @@ class ManasikController extends Controller
     }
     public function show($id)
     {
-        //
+        $manasik = Manasik::all();
+        return view('/homeuser/showmanasik',compact('manasik'));    
     }
     public function edit($id)
     {

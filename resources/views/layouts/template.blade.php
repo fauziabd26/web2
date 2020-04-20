@@ -89,7 +89,7 @@
           </div>
         </div>
       </footer>
-    </div><!-- END COLORLIB-MAIN -->
+      <!-- END COLORLIB-MAIN -->
 <!-- END COLORLIB-PAGE -->
 
   <!-- loader -->

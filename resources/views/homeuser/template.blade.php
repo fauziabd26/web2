@@ -46,7 +46,7 @@
         <h1 id="colorlib-logo"><a href="/home_user"><span class="img" style="background-image: url(src/assets/images/profile/male/image_7.png);"></span></a></h1>
       <nav id="colorlib-main-menu" role="navigation">
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/home_user">Home</a></li>
           <li><a href="/showpakett">Daftar Paket</a></li>
           <li><a href="/showmanasik">Manasik</a></li>
           <li><a href="/contact">Contact</a></li>

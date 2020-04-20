@@ -1,7 +1,9 @@
-@extends('admin.template')
+@extends('homeuser.template')
 
 @section('content')
+
 <div id="colorlib-main"> 
+<section class="ftco-section-no-padding bg-light">
   <div class="container" style="margin-top:20px">
     <h1>Contact</h1>   
  		<div class="page-section contact-page">
@@ -31,4 +33,5 @@
 			</div>
 		</div>
 	</div>
+</section>
 @stop

@@ -26,7 +26,7 @@
               <tr>
                 <td>{{ $m->id }}</td>
                 <td>{{ $m->nama_manasik }}</td>
-                <td>{{ $m->nama_muthowwif }}</td>
+                <td>{{ $m->id_muthowwif }}</td>
                 <td>{{ $m->tanggal }}</td>
                 <td>{{ $m->tempat }}</td>
                 <td>{{ $m->waktu }}</td>

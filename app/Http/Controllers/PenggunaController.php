@@ -28,6 +28,11 @@ class PenggunaController extends Controller
         $muthowwif = DB::table('muthowwif')->get();
         return view('/showmuthowwif', ['muthowwif'=>$muthowwif]);
     }    
+    public function manasik()
+    {
+        $manasik = DB::table('manasik')->get();
+        return view('/homeuser/showmanasik', ['manasik'=>$manasik]);
+    }    
     public function create()
     {
         return view('/admin/tambahpengguna');

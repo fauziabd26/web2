@@ -88,6 +88,8 @@ Route::post('/manasik/store','ManasikController@store');
 Route::get('/manasik/editmanasik/{id}','ManasikController@edit');
 Route::post('/manasik/update','ManasikController@update');
 Route::get('/manasik/destroy/{id}','ManasikController@destroy');
+Route::get('/showmanasik/{id}','ManasikController@show');
+
 //route buat crud pengguna
 Route::get('/pengguna', 'penggunaController@index');
 Route::get('/pengguna/tambahpengguna','penggunaController@create');
@@ -96,6 +98,7 @@ Route::get('/pengguna/editpengguna/{id}','penggunaController@edit');
 Route::post('/pengguna/update','penggunaController@update');
 Route::get('/pengguna/destroy/{id}','penggunaController@destroy');
 Route::get('/showpakett','penggunaController@pakett');
+Route::get('/showmanasik','penggunaController@manasik');
 //login User
 Route::get('/home_user', 'loginuserController@index');
 Route::get('/loginuser', 'loginuserController@loginuser');

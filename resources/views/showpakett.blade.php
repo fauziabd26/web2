@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-  <title>Daftar Paket</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="Photo Gallery HTML Template">
-  <meta name="keywords" content="endGam,gGaming, magazine, html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link href="img/favicon.ico" rel="shortcut icon"/>
+@extends('homeuser.template')
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+@section('content')
 
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-  <link rel="stylesheet" href="css/animate.css"/>
-
-  <!-- Main Stylesheets -->
-  <link rel="stylesheet" href="css/style.css"/>
-
-
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-</head>
-<body>
-	
+        <div id="colorlib-main">
+        <section class="ftco-section-no-padding bg-light">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,17 +43,7 @@
               @endforeach
           </table>
       </div>
-
-	
-
-<!--====== Javascripts & Jquery ======-->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.nicescroll.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/circle-progress.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+    </section>
+  </br>
+</br>
+	  @stop
