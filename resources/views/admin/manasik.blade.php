@@ -1,8 +1,12 @@
 @extends('admin.template')
 
 @section('content')
+
  <div id="colorlib-main"> 
   <div class="container" style="margin-top:20px">
+  </br>
+  </br>
+  </br>
     <h2>Data Paket Haji dan Umroh</h2>        
       @if(count($manasik))
         <div class="table-responsive">

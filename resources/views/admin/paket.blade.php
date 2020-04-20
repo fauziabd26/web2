@@ -3,6 +3,9 @@
 @section('content')
  <div id="colorlib-main"> 
   <div class="container" style="margin-top:20px">
+  </br>
+  </br>
+  </br>
     <h2>Data Paket Haji dan Umroh</h2>   
       <table class="table table-striped table-hover table-sm table-bordered">
         <thead class="thead-dark">

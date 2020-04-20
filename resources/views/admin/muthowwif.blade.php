@@ -3,6 +3,9 @@
 @section('content')
  <div id="colorlib-main"> 
   <div class="container" style="margin-top:20px">   
+  </br>
+  </br>
+  </br>
     <h2>Data Muthowwif</h2>
       @if($muthowwif->count())
       <div class="table-responsive">

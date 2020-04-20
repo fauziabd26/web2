@@ -57,9 +57,6 @@
             </div>
           </div>
     </nav>
-  </br>
-</br>
-</br>
     <!-- partial -->
     <div class="page-body">
       <!-- partial:partials/_sidebar.html -->
@@ -89,31 +86,11 @@
               </a>
             </li>
             <li>
-              <a href="#ui-elements" data-toggle="collapse" aria-expanded="false">
-                <span class="link-title">Gallery</span>
-                <i class="mdi mdi-bullseye link-icon"></i>
-              </a>
-              <ul class="collapse navigation-submenu" id="ui-elements">
-                <li>
-                  <a href="/layouts/gallery">Gallery Haji</a>
-                </li>
-                <li>
-                  <a href="/layouts/gallery">Gallery Umroh</a>
-                </li>
-              </ul>
-            </li>
-            <li>
               <a href="/manasik">
                 <span class="link-title">Manasik</span>
                 <i class="mdi mdi-chart-donut link-icon"></i>
               </a>
             </li>
-          <li>
-            <a href="/contact">
-              <span class="link-title">contact</span>
-              <i class="mdi mdi-flower-tulip-outline link-icon"></i>
-            </a>
-          </li>
         </ul>
       </div>
       <!-- partial -->

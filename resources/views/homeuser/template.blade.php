@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title')</title>
+    <title> {{Session::get('username')}}</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
@@ -19,27 +19,43 @@
     <link rel="stylesheet" href="/csss/css/flaticon.css">
     <link rel="stylesheet" href="/csss/css/icomoon.css">
     <link rel="stylesheet" href="/csss/css/style.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="src/assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
+    <link rel="stylesheet" href="src/assets/css/shared/style.css">
+    <link rel="stylesheet" href="src/assets/css/demo_1/style.css">
+  </head>  
+    <body class="header-fixed">
+    <nav class="t-header">
+      <ul class="nav ml-auto">
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>{{Session::get('username')}}
+          </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ url('/logout')}}">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+            </div>
+        </li>
+      </ul>
+    </nav>
     <div id="colorlib-page">
       <a href="/" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-        <h1 id="colorlib-logo"><a href="/"><span class="img" style="background-image: url(img/slider-bg-1.png);"></span></a></h1>
+        <h1 id="colorlib-logo"><a href="/home_user"><span class="img" style="background-image: url(src/assets/images/profile/male/image_7.png);"></span></a></h1>
       <nav id="colorlib-main-menu" role="navigation">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/layouts/gallery">Gallery</a></li>
-          <li><a href="/showmuthowwif">Muthowwif</a></li>
-          <li><a href="/home_user">Daftar Paket</a></li>
-          <li><a href="/showblog">Blog</a></li>
-          <li><a href="/testimoni">Testimoni</a></li>
-          <li><a href="/loginuser">Login</a></li>
+          <li><a href="/showpakett">Daftar Paket</a></li>
+          <li><a href="/showmanasik">Manasik</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     </aside>
-   </div>  <!-- END COLORLIB-ASIDE -->
-      @show
-      @yield('content')
+   </div>
+   @show
+  @yield('content')
       <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container px-md-5">
           <div class="row mb-5">
@@ -49,18 +65,6 @@
                 <ul class="list-unstyled photo">
                   <li><a href="#" class="img" style="background-image: url(/img/gallery/11.jpeg);"></a></li>
                   <li><a href="#" class="img" style="background-image: url(/img/gallery/12.jpeg);"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md">
-               <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Archives</h2>
-                <ul class="list-unstyled categories">
-                  <li><a href="#">November 2018 <span>(105)</span></a></li>
-                  <li><a href="#">October 2018 <span>(212)</span></a></li>
-                  <li><a href="#">September 2018 <span>(150)</span></a></li>
-                  <li><a href="#">August 2018 <span>(100)</span></a></li>
-                  <li><a href="#">July 2018 <span>(200)</span></a></li>
                 </ul>
               </div>
             </div>
@@ -87,33 +91,15 @@
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
           </div>
-        </div>
-      </footer>
-    </div><!-- END COLORLIB-MAIN -->
-<!-- END COLORLIB-PAGE -->
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+        </footer>
+        
+      
   
-
-  <script src="/csss/js/jquery.min.js"></script>
-  <script src="/csss/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="/csss/js/popper.min.js"></script>
-  <script src="/csss/js/bootstrap.min.js"></script>
-  <script src="/csss/js/jquery.easing.1.3.js"></script>
-  <script src="/csss/js/jquery.waypoints.min.js"></script>
-  <script src="/csss/js/jquery.stellar.min.js"></script>
-  <script src="/csss/js/owl.carousel.min.js"></script>
-  <script src="/csss/js/jquery.magnific-popup.min.js"></script>
-  <script src="/csss/js/aos.js"></script>
-  <script src="/csss/js/jquery.animateNumber.min.js"></script>
-  <script src="/csss/js/bootstrap-datepicker.js"></script>
-  <script src="/csss/js/jquery.timepicker.min.js"></script>
-  <script src="/csss/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="/csss/js/google-map.js"></script>
-  <script src="/csss/js/main.js"></script>
-    
+    <script src="src/assets/vendors/js/core.js"></script>
+    <script src="src/assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="src/assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="src/assets/js/charts/chartjs.addon.js"></script>
+    <script src="src/assets/js/template.js"></script>
+    <script src="src/assets/js/dashboard.js"></script>
   </body>
 </html>

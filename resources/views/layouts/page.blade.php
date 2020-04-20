@@ -3,7 +3,19 @@
 @section('title', 'Travel Multazam')
 
 @section('content')
+
+<!-- <nav class="header">
+        <li>
+          <a href="/loginuser">Login</a>
+        </li>
+      </nav> -->
+</br>
+</br>
+</br>
+</br>
+
 <div id="colorlib-main">
+      
       <section class="ftco-section-no-padding bg-light">
         <div class="hero-wrap">
           <div class="overlay"></div>
