@@ -25,17 +25,36 @@
 	<br/>
 	<br/>
 
-	@foreach($muthowwif as $p)
-	<form action="/muthowwif/update" method="post">
-		{{ csrf_field() }}
-		<input type="hidden" name="no" value="{{ $p->no }}"> <br/>
-		id <input type="text" required="required" name="id" value="{{ $p->id }}"> <br/>
-		name <input type="text" required="required" name="name" value="{{ $p->name }}"> <br/>
-		umur <input type="text" required="required" name="umur" value="{{ $p->umur }}"> <br/>
-		alamat <input type="text" required="required" name="alamat" value="{{ $p->alamat }}"> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
-	@endforeach
+	<div class="col-md-6">
+		    	<div class="panel panel-default">
+	  				<div class="panel-body">
+                        {!! Form::model($muthowwif,['method'=>'POST','action'=>['MuthowwifController@update',$muthowwif->id_muthowwif]]) !!}
+						<div class="form-group">
+							{!! Form::label('id', 'Id Muthowwif') !!}
+							{!! Form::text('id_muthowwif',null, array('class' => 'form-control','placeholder'=>'Id Muthowwif')) !!}
+						</div>
+						<div class="row">
+					        <div class="col s6">
+					            <img width="150px" src="{{ url('/gambar_muthowwif/'.$muthowwif->file) }}">
+					        </div>
+					    </div>
+                        <div class="form-group">
+							{!! Form::label('nama', 'Nama Muthowwif') !!}
+							{!! Form::text('nama_muthowwif', null, array('class' => 'form-control','placeholder'=>'Nama Muthowwif')) !!}
+						</div>
+						<div class="form-group">
+							{!! Form::label('umur', 'Umur') !!}
+							{!! Form::text('umur', null, array('class' => 'form-control','placeholder'=>'Umur')) !!}
+						</div>
+						<div class="form-group">
+							{!! Form::label('alamat', 'Alamat') !!}
+							{!! Form::text('alamat', null, array('class' => 'form-control','placeholder'=>'Alamat')) !!}
+						</div>
+						{!! Form::button('<i class="fa fa-check-square"></i>'. ' Update', array('type' => 'submit', 'class' => 'btn btn-primary'))!!}
+						{!! Form::close()!!}
+					</div>
+				</div>
+			</div>
 		
 
 </body>

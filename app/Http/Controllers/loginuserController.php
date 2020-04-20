@@ -12,16 +12,16 @@ class loginuserController extends Controller
 {
     public function index()
     {
-        if(!Session::get('login')){
-            return redirect('login')->with('Alert','You must Login');
+        if(!Session::get('loginuser')){
+            return redirect('loginuser')->with('Alert','You must Login');
         } else {
             return view('/home_user');
         }
         
     }
 
-    public function login(){
-        return view ('/login');
+    public function loginuser(){
+        return view ('/loginuser');
     }
 
     public function loginPost(Request $request){
@@ -37,20 +37,20 @@ class loginuserController extends Controller
                 Session::put('password',$data->password);
 
                 Session::put('alamat',$data->alamat);
-                Session::put('login',TRUE);
+                Session::put('loginuser',TRUE);
                 return redirect('home_user');
             }
             else {
-                return redirect('login')->with('alert', 'login yang bener woy !');
+                return redirect('loginuser')->with('alert', 'login yang bener woy !');
             }
         } else {
-            return redirect('login')->with('alert', 'Your Password Incorrect !');
+            return redirect('loginuser')->with('alert', 'Your Password Incorrect !');
         }
     }
 
     public function logout(){
         Session::flush();
-        return redirect('login')->with ('alert', 'Your Was Logout');
+        return redirect('loginuser')->with ('alert', 'Your Was Logout');
     }
 
     public function register(Request $request){
@@ -79,6 +79,6 @@ class loginuserController extends Controller
 
         $data->alamat = $request->alamat;
         $data->save();
-        return redirect('login')->with('alert-success','Kamu berhasil Register');
+        return redirect('loginuser')->with('alert-success','Kamu berhasil Register');
     }
 }

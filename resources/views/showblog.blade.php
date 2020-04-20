@@ -1,96 +1,124 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<title>Blog</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Photo Gallery HTML Template">
-	<meta name="keywords" content="endGam,gGaming, magazine, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+@extends('layouts.template')
 
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+@section('title', 'Blog')
 
-
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
-
-
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-</head>
-<body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-
-	<!-- Top right elements -->
-	<div class="spacial-controls">
-		<div class="search-switch"><img src="img/search-icon.png" alt=""></div>
-		<div class="nav-switch-warp">
-			<div class="nav-switch">
-				<div class="ns-bar"></div>
-			</div>
-		</div>
-	</div>
-	<!-- Top right elements end -->
-
-	<div class="main-warp">
-		<!-- header section -->
-		<header class="header-section">
-			<div class="header-close">
-				<i class="fa fa-times"></i>
-			</div>
-			<div class="header-warp">
-				<a href="" class="site-logo">
-					<img src="./img/slider-bg-1.png" alt="">
-				</a>
-				<img src="img/menu-icon.png" alt="" class="menu-icon">
-				<ul class="main-menu">
-					<li><a href="/">About Us</a></li>
-		            <li><a href="/layouts/gallery">Gallery</a></li>
-		            <li><a href="/showmuthowwif">Muthowwif</a></li>
-		            <li><a href="/showpaket">Daftar Paket</a></li>
-		            <li><a href="/showblog">Blog</a></li>
-		            <li><a href="/testimoni">Testimoni</a></li>
-				</ul>
-				<div class="social-links-warp">
-					<div class="social-links">
-						<a href=""><i class="fa fa-behance"></i></a>
-						<a href=""><i class="fa fa-dribbble"></i></a>
-						<a href=""><i class="fa fa-twitter"></i></a>
-						<a href=""><i class="fa fa-facebook"></i></a>
-						<a href=""><i class="fa fa-pinterest"></i></a>
-					</div>
-					<div class="social-text">Find us on</div>
+@section('content')
+<div id="colorlib-main">
+			<section class="ftco-section ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text justify-content-center align-items-center">
+	          <div class="col-md-8 ftco-animate">
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p>
+	            <h1 class="bread">Read Our Blog</h1>
+	          </div>
+	        </div>
 				</div>
-			</div>
-			<div class="copyright">Colorlib 2018  @ All rights reserved</div>
-		</header>
-		<!-- header section end -->
+			</section>
+			<section class="ftco-section">
+	    	<div class="container">
+	    		<div class="row d-flex">
+	    			<div class="col-lg-8">
+	    				<div class="row">
+			    			<div class="col-md-12">
+			    				<div class="blog-entry ftco-animate d-md-flex">
+									<a href="single.html" class="img img-2" style="background-image: url(img/blog/doa1.jpg);"></a>
+										<div class="text text-2 p-4">
+				              				<h3 class="mb-2"><a href="single.html">The best tips & tricks</a></h3>
+				              				<div class="meta-wrap">
+												<p class="meta">
+								              		<span>Dec 14, 2018</span>
+								              		<span><a href="single.html">Do'a-Do'a</a></span>
+								              		<span>5 Comment</span>
+				              					</p>
+			              					</div>
+								              <p class="mb-4">Jika membaca doa ini maka agar terhindar dari segala penyakit. </p>
+								              <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+				            			</div>
+								</div>
+			    			</div>
+			    			<div class="col-md-12">
+			    				<div class="blog-entry ftco-animate d-md-flex">
+									<a href="single.html" class="img img-2" style="background-image: url(img/blog/doa2.jpg);"></a>
+										<div class="text text-2 p-4">
+				              				<h3 class="mb-2"><a href="single.html">The Best Tips & Tricks</a></h3>
+				              				<div class="meta-wrap">
+												<p class="meta">
+								              		<span>Dec 14, 2018</span>
+								              		<span><a href="single.html">Quotes of the day</a></span>
+								              		<span>5 Comment</span>
+				              					</p>
+			              					</div>
+								              <p class="mb-4">Doa pagi dan sore jika membaca di pagi dan di sore hari maka terhindar dari segala sesuatu membahayakan.</p>
+								              <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+				            			</div>
+								</div>
+			    			</div>
+			    		</div><!-- END-->
+			    		<div class="row">
+			          		<div class="col">
+			            		<div class="block-27">
+					              <ul>
+					                <li><a href="#">&lt;</a></li>
+					                <li class="active"><span>1</span></li>
+					                <li><a href="#">2</a></li>
+					                <li><a href="#">3</a></li>
+					                <li><a href="#">&gt;</a></li>
+					              </ul>
+			            		</div>
+			          		</div>
+			        	</div>
+			    	</div>
+	    				<div class="col-lg-4 sidebar ftco-animate bg-light">
+				            <div class="sidebar-box">
+				              <form action="#" class="search-form">
+				                <div class="form-group">
+				                  <span class="icon icon-search"></span>
+				                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+				                </div>
+				              </form>
+				            </div>
+
+	            <div class="sidebar-box ftco-animate">
+	              <h3 class="sidebar-heading">Tag Cloud</h3>
+	              <ul class="tagcloud">
+	                <a href="#" class="tag-cloud-link">Do'a-Do'a</a>
+	                <a href="#" class="tag-cloud-link">Quotes</a>
+	              </ul>
+	            </div>
+
+							<div class="sidebar-box subs-wrap img" style="background-image: url(img/bg_1.jpg);">
+								<div class="overlay"></div>
+								<h3 class="mb-4 sidebar-heading">Newsletter</h3>
+								<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia</p>
+	              <form action="#" class="subscribe-form">
+	                <div class="form-group">
+	                  <input type="text" class="form-control" placeholder="Email Address">
+	                  <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
+	                </div>
+	              </form>
+	            </div>
+
+	            <div class="sidebar-box ftco-animate">
+	              <h3 class="sidebar-heading">Paragraph</h3>
+	              <p>Kunjungi lah beberapa blog kami semoga bermanfaat.</p>
+	            </div>
+	          </div><!-- END COL -->
+	    		</div>
+	    	</div>
+	    </section>
+	  @stop
 
 
-		<!-- Page section -->
-		<div class="page-section blog-page">
+
+		<!-- <div class="page-section blog-page">
 			<div class="blog-warp">
 				<div class="blog-track">
 					<div class="blog-post">
 						<div class="blog-thumb set-bg" data-setbg="img/blog/doa1.jpg">
-							<!-- <div class="post-date">
+							<div class="post-date">
 								<h3>10</h3>
 								<span>Dec, ‘18</span>
-							</div> -->
+							</div>
 						</div>
 						<h2 class="post-title">The best tips & tricks</h2>
 						<div class="post-metas">
@@ -116,30 +144,5 @@
 				</div>
 			</div>
 		</div>
-		<!-- Page section end-->
-	</div>
-
-	<!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">x</div>
-			<form class="search-moderl-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
-
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/main.js"></script>
-
-	</body>
-</html>
+		 Page section end-->
+	 

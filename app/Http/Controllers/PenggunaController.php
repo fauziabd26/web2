@@ -17,6 +17,16 @@ class PenggunaController extends Controller
     {
         $pengguna = DB::table('pengguna')->get();
         return view('/admin/pengguna', ['pengguna'=>$pengguna]);
+    }
+    public function pakett()
+    {
+        $paket = DB::table('paket')->get();
+        return view('/showpakett', ['paket'=>$paket]);
+    }
+    public function muthowwif()
+    {
+        $muthowwif = DB::table('muthowwif')->get();
+        return view('/showmuthowwif', ['muthowwif'=>$muthowwif]);
     }    
     public function create()
     {
@@ -51,7 +61,6 @@ class PenggunaController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *

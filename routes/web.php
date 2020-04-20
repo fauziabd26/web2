@@ -34,9 +34,6 @@ Route::get('/homeadmin', function () {
 Route::get('login', function () {
     return view('login');
 });
-Route::get('showmuthowwif', function () {
-    return view('showmuthowwif');
-});
 Route::get('showpaket', function () {
     return view('showpaket');
 });
@@ -54,11 +51,12 @@ Route::get('/testimoni', function () {
 });
 //route buat crud muthowwif
 Route::get('/muthowwif', 'MuthowwifController@index');
-Route::get('/muthowwif/tambahmuthowwif','MuthowwifController@tambah');
-Route::post('/muthowwif/store','MuthowwifController@store');
-Route::get('/muthowwif/editmuthowwif/{id}','MuthowwifController@edit');
-Route::post('/muthowwif/update','MuthowwifController@update');
-Route::get('/muthowwif/hapus/{id}','MuthowwifController@hapus');
+Route::get('/muthowwif/tambahmuthowwif','MuthowwifController@create');
+Route::get('/muthowwif/editmuthowwif/{id_muthowwif}','MuthowwifController@edit');
+Route::post('/muthowwif/editmuthowwif/{id_muthowwif}','MuthowwifController@update');
+Route::get('/muthowwif/destroy/{id_muthowwif}','MuthowwifController@destroy');
+Route::get('/showmuthowwif','penggunaController@muthowwif');
+Route::post('/muthowwif/proses', 'MuthowwifController@proses_upload');
 
 //route buat crud adminn
 Route::get('/adminn', 'AdminnController@index');
@@ -79,24 +77,17 @@ Route::get('/paket', 'paketController@index');
 Route::get('/paket/tambahpaket','paketController@create');
 Route::post('/paket/store','paketController@store');
 Route::get('/paket/editpaket/{id}','paketController@edit');
+Route::get('/paket/editpakett/{id}','paketController@edit');
 Route::post('/paket/update','paketController@update');
 Route::get('/paket/destroy/{id}','paketController@destroy');
 Route::get('/showpaket/{id}','paketController@show');
-
-//route buat crud paket
-Route::get('/regispaket', 'regispaketController@index');
-Route::get('/regispaket/tambahregispaket','regispaketController@create');
-Route::post('/regispaket/store','regispaketController@store');
-Route::get('/regispaket/editregispaket/{id}','regispaketController@edit');
-Route::post('/regispaket/update','regispaketController@update');
-Route::get('/regis/{id}','PostController@show');
 //route buat crud manasik
-Route::get('/manasik', 'manasikController@index');
-Route::get('/manasik/tambahmanasik','manasikController@create');
-Route::post('/manasik/store','manasikController@store');
-Route::get('/manasik/editmanasik/{id}','manasikController@edit');
-Route::post('/manasik/update','manasikController@update');
-Route::get('/manasik/destroy/{id}','manasikController@destroy');
+Route::get('/manasik', 'ManasikController@index');
+Route::get('/manasik/tambahmanasik','ManasikController@create');
+Route::post('/manasik/store','ManasikController@store');
+Route::get('/manasik/editmanasik/{id}','ManasikController@edit');
+Route::post('/manasik/update','ManasikController@update');
+Route::get('/manasik/destroy/{id}','ManasikController@destroy');
 //route buat crud pengguna
 Route::get('/pengguna', 'penggunaController@index');
 Route::get('/pengguna/tambahpengguna','penggunaController@create');
@@ -104,9 +95,10 @@ Route::post('/pengguna/store','penggunaController@store');
 Route::get('/pengguna/editpengguna/{id}','penggunaController@edit');
 Route::post('/pengguna/update','penggunaController@update');
 Route::get('/pengguna/destroy/{id}','penggunaController@destroy');
+Route::get('/showpakett','penggunaController@pakett');
 //login User
 Route::get('/home_user', 'loginuserController@index');
-Route::get('/login', 'loginuserController@login');
+Route::get('/loginuser', 'loginuserController@loginuser');
 Route::post('/loginPost', 'loginuserController@loginPost');
 Route::get('/register', 'loginuserController@register');
 Route::post('/registerPost', 'loginuserController@registerPost');
@@ -118,4 +110,7 @@ Route::post('/loginadminPost', 'loginadminController@loginadminPost');
 Route::get('/registeradmin', 'loginadminController@registeradmin');
 Route::post('/registeradminPost', 'loginadminController@registeradminPost');
 Route::get('/logoutadmin', 'loginadminController@logoutadmin');
-
+// Route untuk upload
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@proses_upload');
+Route::get('/upload/hapus/{id}', 'UploadController@hapus');

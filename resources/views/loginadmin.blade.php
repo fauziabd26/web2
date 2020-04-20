@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
     <title>Login Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="src/assets/vendors/iconfonts/mdi/css/materialdesignicons.css" />
-    <link rel="stylesheet" href="src/assets/vendors/css/vendor.addons.css" />
-    <!-- endinject -->
-    <!-- vendor css for this page -->
-    <!-- End vendor css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="src/assets/css/shared/style.css" />
-    <!-- endinject -->
-    <!-- Layout style -->
-    <link rel="stylesheet" href="src/assets/css/demo_1/style.css">
-    <!-- Layout style -->
-    <link rel="shortcut icon" href="src/assets/images/favicon.ico" />
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+    <link rel="icon" type="/login/image/png" href="/login/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/login/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/login/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="/login/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/login/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/login/css/main.css">
+<!--===============================================================================================-->
+</head>
   <body>
     <div class="authentication-theme auth-style_1">
       <div class="row">
@@ -74,16 +79,15 @@
         <p class="text-muted text-center">© MWR Inc 2019</p>
       </div>
     </div>
-    <!--page body ends -->
-    <!-- SCRIPT LOADING START FORM HERE /////////////-->
-    <!-- plugins:js -->
-    <script src="src/assets/vendors/js/core.js"></script>
-    <script src="src/assets/vendors/js/vendor.addons.js"></script>
-    <!-- endinject -->
-    <!-- Vendor Js For This Page Ends-->
-    <!-- Vendor Js For This Page Ends-->
-    <!-- build:js -->
-    <script src="src/assets/js/template.js"></script>
-    <!-- endbuild -->
+    <!--===============================================================================================-->  
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="js/main.js"></script>
+
   </body>
 </html>

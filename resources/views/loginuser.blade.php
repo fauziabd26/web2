@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="src/assets/css/demo_1/style.css">
     <!-- Layout style -->
     <link rel="shortcut icon" href="src/assets/images/favicon.ico" />
-  </head>
+</head>
   <body>
     <div class="authentication-theme auth-style_1">
       <div class="row">
@@ -44,12 +44,13 @@
                 </div>
             @endif
                <form action="{{ url('/loginPost') }}" method="post">
+                    @csrf
                     <div class="form-group input-rounded">
                       
-                      <input type="email" class="form-control" placeholder="Email" />
+                      <input type="email" class="form-control" placeholder="Email" name="email" />
                     </div>
                     <div class="form-group input-rounded">
-                      <input type="password" class="form-control" placeholder="Password" />
+                      <input type="password" class="form-control" placeholder="Password" name="password" />
                     </div>
                     <div class="form-inline">
                       <div class="checkbox">
@@ -57,8 +58,8 @@
                           <input type="checkbox" class="form-check-input" />Remember me <i class="input-frame"></i>
                         </label>
                       </div>
-					</div>
-					<div class="form-group">
+          </div>
+          <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Login</button>
                     <a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>
                 </div>
@@ -73,7 +74,6 @@
         <p class="text-muted text-center">© MWR Inc 2019</p>
       </div>
     </div>
-    <!--page body ends -->
     <!-- SCRIPT LOADING START FORM HERE /////////////-->
     <!-- plugins:js -->
     <script src="src/assets/vendors/js/core.js"></script>

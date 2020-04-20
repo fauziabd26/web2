@@ -19,20 +19,25 @@
 	<br/>
 	<br/>
 	<br>
-<form action="/manasik/store" method="POST" class="table table-striped table-hover table-sm table-bordered">
-{{ csrf_field() }}
-	<lable>Id_Manasik:</lable>
+
+
+	<form action="/manasik/store" method="POST" class="table table-striped table-hover table-sm table-bordered">
+	{{ csrf_field() }}
+	<lable>Id :</lable>
 	 	<input type="text" name="id" class="form-group"><br>
 	<lable>Nama Manasik</lable>
  		<input type="text" name="nama_manasik" class="form-group"><br>
-	<lable>Tanggal: </lable>
+	<div class="form-group">
+		{!! Form::label('Nama', 'Nama Muthowwif') !!}
+		{!! Form::select('id_muthowwif', $muthowwif ?? '' ,null , array('class' => 'form-control')) !!}	
+	</div>
+	<lable>Tanggal </lable>
 		<input type="date" name="tanggal" class="form-group"><br>
-	<lable>Tempat:</lable>
+	<lable>Tempat</lable>
  		<input type="text" name="tempat" class="form-group"><br>
-	<lable>Waktu:</lable>
+ 	<lable>Waktu</lable>
  		<input type="time" name="waktu" class="form-group"><br>
-
-<input type="submit"  value="Add" class="btn btn-primary">
+	<input type="submit"  value="Add" class="btn btn-primary">
 </form>
 	
 </body>

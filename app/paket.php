@@ -8,5 +8,5 @@ class paket extends Model
 {
     protected $table="paket";
 	protected $primaryKey="id";
-	protected $fillable=['id','nama_paket'];
+	protected $fillable=['id','name','durasi','tanggal','penerbangan','hotelmekka','hotelmadina','kontak','notelp'];
 }

@@ -38,9 +38,12 @@ class paketController extends Controller
     {
         DB::table('paket') -> insert([
         'id' => $request ->id,
+        'name' => $request ->name,
+        'durasi' => $request ->durasi,
         'tanggal' => $request ->tanggal,
-        'nama_muthowwif' => $request ->nama_muthowwif,
-        'nama_paket' => $request ->nama_paket,
+        'pesawat' => $request ->pesawat,
+        'hotelmekka' => $request ->hotelmekka,
+        'hotelmadina' => $request ->hotelmadina,
 
     ]);
            return redirect('/paket');
@@ -80,10 +83,12 @@ class paketController extends Controller
     public function update(Request $request)
     {
         DB::table('paket')->where('id',$request->id)->update([
-            'tanggal' => $request->tanggal,
-            'nama_muthowwif' => $request ->nama_muthowwif,
-            'nama_paket' => $request ->nama_paket,
-            
+            'name' => $request ->name,
+            'durasi' => $request ->durasi,
+            'tanggal' => $request ->tanggal,
+            'pesawat' => $request ->pesawat,
+            'hotelmekka' => $request ->hotelmekka,
+            'hotelmadina' => $request ->hotelmadina,
         ]);
          return redirect('/paket');    }
 

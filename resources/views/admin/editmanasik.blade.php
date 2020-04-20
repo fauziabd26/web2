@@ -24,19 +24,40 @@
 	<br/>
 	<br/>
 
-	@foreach($manasik as $p)
-	<form action="/manasik/update" method="post">
-		{{ csrf_field() }}
-		id <input type="text" required="required" name="id" value="{{ $p->id }}"> <br/>
-		Nama Manasik <input type="text" required="required" name="nama_manasik" value="{{ $p->nama_manasik }}"> <br/>
-		Tanggal <input type="text" required="required" name="tanggal" value="{{ $p->tanggal }}"> <br/>
-		Tempat <input type="text" required="required" name="tempat" value="{{ $p->tempat }}"> <br/>
-		<lable>Waktu:</lable>
- 		<input type="time" name="waktu" class="form-group"><br>
-		<input type="submit" value="Simpan Data">
-	</form>
-	@endforeach
-		
+	<div class="col-md-6">
+		    	<div class="panel panel-default">
+	  				<div class="panel-body">
+						{!! Form::model($manasik,['method'=>'PATCH','action'=>['ManasikController@update',$manasik->id]]) !!}
+						<div class="form-group">
+							{!! Form::label('id', 'id') !!}
+							{!! Form::text('id',null, array('class' => 'form-control','placeholder'=>'id')) !!}
+						</div>
+                        <div class="form-group">
+							{!! Form::label('nama', 'Nama Manasik') !!}
+							{!! Form::text('nama_manasik', null, array('class' => 'form-control','placeholder'=>'Nama Manasik')) !!}
+						</div>
+                        <div class="form-group">
+							{!! Form::label('Nama', 'Nama Muthowwif') !!}
+							{!! Form::select('id_muthowwif', $muthowwif ,null , array('class' => 'form-control')) !!}
+						</div>
+                        <div class="form-group">
+							{!! Form::label('tanggal', 'Tanggal') !!}
+							{!! Form::text('tanggal', null, array('class' => 'form-control','placeholder'=>'Tanggal')) !!}
+						</div>
+						<div class="form-group">
+							{!! Form::label('tempat', 'Tempat') !!}
+							{!! Form::text('tempat', null, array('class' => 'form-control','placeholder'=>'Tempat')) !!}
+						</div>
+						<div class="form-group">
+							{!! Form::label('waktu', 'Waktu') !!}
+							{!! Form::text('waktu', null, array('class' => 'form-control','placeholder'=>'Waktu')) !!}
+						</div>
+
+						{!! Form::button('<i class="fa fa-check-square"></i>'. ' Update', array('type' => 'submit', 'class' => 'btn btn-primary'))!!}
+						{!! Form::close()!!}
+					</div>
+				</div>
+			</div>	
 
 </body>
 </html>

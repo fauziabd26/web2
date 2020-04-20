@@ -21,17 +21,20 @@
 	<br>
 <form action="/paket/store" method="POST" class="table table-striped table-hover table-sm table-bordered">
 {{ csrf_field() }}
-	<lable>Id_Paket:</lable>
+	<lable>Id_Paket : </lable>
 	 	<input type="text" name="id" class="form-group"><br>
-	<lable>Tanggal:</lable>
+	 	<lable>Nama Paket : </lable>
+	 	<input type="text" name="name" class="form-group"><br>
+	 	<lable>Durasi : </lable>
+	 	<input type="text" name="durasi" class="form-group"><br>
+		<lable>Tanggal Keberangkatan : </lable>
  		<input type="date" name="tanggal" class="form-group"><br>
-	<lable>Nama_Muthowwif</lable>
- 		<input type="text" name="nama_muthowwif" class="form-group"><br>
-	<lable>Nama_Paket: </lable>
-		<input type="text" name="nama_paket" class="form-group"><br>
-	
-
-
+		<lable>Pesawat : </lable>
+ 		<input type="text" name="pesawat" class="form-group"><br>
+		<lable>Hotel Di Mekkah : </lable>
+		<input type="text" name="hotelmekka" class="form-group"><br>
+		<lable>Hotel Di Madinah : </lable>
+		<input type="text" name="hotelmadina" class="form-group"><br>
 <input type="submit"  value="Add" class="btn btn-primary">
 </form>
 	
