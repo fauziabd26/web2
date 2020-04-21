@@ -32,6 +32,7 @@
           </a>
         </div>
       </div>
+
       <div class="row">
         <div class="col-lg-5 col-md-7 col-sm-9 col-11 mx-auto">
           <div class="grid">
@@ -66,7 +67,7 @@
 					</div>
 					<div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Login</button>
-                    <a href="{{url('registeradmin')}}" class="btn btn-md btn-warning">Register</a>
+                    <a href="{{url('/')}}" class="btn btn-md btn-warning">Kembali Ke Beranda</a>
                 </div>
                   </form>
                 </div>
@@ -79,14 +80,10 @@
         <p class="text-muted text-center">© MWR Inc 2019</p>
       </div>
     </div>
-    <!--===============================================================================================-->  
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
   <script src="vendor/bootstrap/js/popper.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
   <script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
   <script src="js/main.js"></script>
 
   </body>

@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login User</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="src/assets/vendors/iconfonts/mdi/css/materialdesignicons.css" />
-    <link rel="stylesheet" href="src/assets/vendors/css/vendor.addons.css" />
-    <!-- endinject -->
-    <!-- vendor css for this page -->
-    <!-- End vendor css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="src/assets/css/shared/style.css" />
-    <!-- endinject -->
-    <!-- Layout style -->
-    <link rel="stylesheet" href="src/assets/css/demo_1/style.css">
-    <!-- Layout style -->
-    <link rel="shortcut icon" href="src/assets/images/favicon.ico" />
-</head>
-  <body>
+@extends('layouts.template')
+
+@section('title', 'Travel Multazam')
+
+@section('content')
+<div id="colorlib-main">
+    <section class="ftco-section-no-padding bg-light">
     <div class="authentication-theme auth-style_1">
-      <div class="row">
-        <div class="col-12 logo-section">
-          <a href="src/index.html" class="logo">
-            <img src="src/assets/images/logo.svg" alt="logo" />
-          </a>
-        </div>
-      </div>
+      </br>
+      </br>
+      </br>
       <div class="row">
         <div class="col-lg-5 col-md-7 col-sm-9 col-11 mx-auto">
           <div class="grid">
             <div class="grid-body">
               <div class="row">
-                <div class="col-lg-7 col-md-8 col-sm-9 col-12 mx-auto form-wrapper">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-12 mx-auto form-wrapper">
                   @if(\Session::has('alert'))
                 <div class="alert alert-danger">
                     <div>{{Session::get('alert')}}</div>
@@ -58,11 +40,19 @@
                           <input type="checkbox" class="form-check-input" />Remember me <i class="input-frame"></i>
                         </label>
                       </div>
+                      <div style="margin-left:15px; ">
+                        Belum punya akun klik &nbsp; <a style="color:blue;" href="{{url('register')}}">daftar</a>
+                    </div>
           </div>
           <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Login</button>
-                    <a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>
-                </div>
+                    <a href="{{url('loginadmin')}}" class="btn btn-md btn-primary">Login Sebagai Admin</a>
+                    </div>
+                    
+                  </br>
+                  </br>
+                  </br>
+                
                   </form>
                 </div>
               </div>
@@ -74,15 +64,5 @@
         <p class="text-muted text-center">© MWR Inc 2019</p>
       </div>
     </div>
-    <!-- SCRIPT LOADING START FORM HERE /////////////-->
-    <!-- plugins:js -->
-    <script src="src/assets/vendors/js/core.js"></script>
-    <script src="src/assets/vendors/js/vendor.addons.js"></script>
-    <!-- endinject -->
-    <!-- Vendor Js For This Page Ends-->
-    <!-- Vendor Js For This Page Ends-->
-    <!-- build:js -->
-    <script src="src/assets/js/template.js"></script>
-    <!-- endbuild -->
-  </body>
-</html>
+</section>
+@stop
